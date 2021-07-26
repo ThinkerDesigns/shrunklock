@@ -91,8 +91,8 @@ def search():
                    "younow.com", 
                    "authorstream.com"
                   ]
-    for i in baseURLS:
-        req = requests.get("//" + i + "/" + val)
-        print((i + "/" + val), req.status_code)
+    for baseURL in baseURLS:
+        req = requests.get("//" + baseURL + "/" + val)
+        print((baseURL + "/" + val), req.status_code)
 search()
 #print("Ignore that, nothing to worry about")
