@@ -16,7 +16,7 @@ print ("Searching, this may take a while\n")
 #    file.close()
 #search()
 def search():
-    baseURLS = ["about.me", 
+    baseURLs = ["about.me", 
                    "independent.academia.edu", 
                    "ask.fm", 
                    "avizo.cz", 
@@ -91,7 +91,7 @@ def search():
                    "younow.com", 
                    "authorstream.com"
                   ]
-    for baseURL in baseURLS:
+    for baseURL in baseURLs:
         req = requests.get("//" + baseURL + "/" + val)
         print((baseURL + "/" + val), req.status_code)
 search()
