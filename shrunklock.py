@@ -16,7 +16,7 @@ print ("Searching, this may take a while\n")
 #    file.close()
 #search()
 def search():
-    sitesOneDir = ["about.me", 
+    baseURLS = ["about.me", 
                    "independent.academia.edu", 
                    "ask.fm", 
                    "avizo.cz", 
@@ -91,7 +91,7 @@ def search():
                    "younow.com", 
                    "authorstream.com"
                   ]
-    for i in sitesOneDir:
+    for i in baseURLS:
         req = requests.get("//" + i + "/" + val)
         print((i + "/" + val), req.status_code)
 search()
