@@ -1,10 +1,10 @@
-import os
+#import os
 import requests
-import json
-import sys
-import re
-import platform
-from argparse import ArgumentParser, PARSER
+#import json
+#import sys
+#import re
+#import platform
+#from argparse import ArgumentParser, PARSER
 val = input("Enter the user for which you would like to search: ")
 print ("Searching, this may take a while\n")
 #def search():
@@ -22,7 +22,7 @@ def search():
                    "avizo.cz", 
                    "blip.fm", 
                    "bandcamp.com", 
-                   "bazar.cz", 
+                   #"bazar.cz", 
                    "behance.net", 
                    "bitbucket.org", 
                    "bodyspace.bodybuilding.com", 
@@ -92,7 +92,7 @@ def search():
                    "authorstream.com"
                   ]
     for i in sitesOneDir:
-        req = requests.get("https://" + i + "/" + val)
+        req = requests.get("//" + i + "/" + val)
         print((i + "/" + val), req.status_code)
 search()
-print("Ignore that, nothing to worry about")
+#print("Ignore that, nothing to worry about")
